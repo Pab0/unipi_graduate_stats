@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Invocation: ./pdf_to_csv.py PDF_SOURCE GRADUATION_TIME
+# Arguments:
+#   PDF_SOURCE: PDF file with table to be converted
+#   GRADUATION_TIME: String indicating the graduation time, in "YEAR.MONTH" format
+# Usage: Takes a PDF containing a (multi-page) table of graduating students, and extracts it to a csv file.
 
 import sys
 import os

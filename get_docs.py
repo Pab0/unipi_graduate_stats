@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Invocation: ./get_docs.py
+# Usage: Downloads all documents from all articles appearing in the search result of $URL
 
 import os
 import requests
