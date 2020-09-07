@@ -1,0 +1,23 @@
+1. Search for "ορκωμοσία": www.cs.unipi.gr/index.php?searchword=ορκωμοσία&ordering=newest&searchphrase=all&limit=0&option=com_search&lang=el
+- Notice that same text template is used in earliest (2015) and latest (2020) announcement; Programme name and graduation date can thus be extracted.
+
+2. Download all relevant announcement files.
+- Account for ορθη επαναληψη
+2.1 All to pdf
+- To have the same workflow
+- Original files are all over the place, see `file -b announcements/* | sed 's/,.*//g' | sort | uniq -c`
+- Account for all filetypes detected in the above
+
+3. Filter only the ones including proper template.
+- `pdftotext -layout` & `pdf2txt` are fine for the text/template part, but butcher the table.
+- `pdftotext -table` might yield better results, not in Ubuntu repository yet though
+
+4. Extract Programme & graduation date information.
+
+5. Extract table to csv/similar.
+- `pdftohtml` again splits the entries into lines, but at least they're in the correct order; we can extract the information from there.
+- Too messy, especially with multi-line names. Instead: Python Camelot.
+
+6. Calculate stats.
+
+7. Graph results.
