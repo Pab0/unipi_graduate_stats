@@ -53,3 +53,13 @@ done
 for pdf_file in "$announcements_dir"/*.pdf; do
 	./pdf_to_csv.py "$pdf_file"
 done
+
+# 5.1 Fix CSV files
+for csv_file in "$announcements_dir"/*.csv; do
+	sed -i -E 's/(Π[0-9]{5})  ([^,]*),/\1,\2/g' "$csv_file" # separate name and ID where needed
+	sed -i -E '/,,/d' "$csv_file"  # delete lines with empty fields (ie. leftovers from page-splits)
+	sed -i -E '/Π[0-9]{5},/!d' "$csv_file"	# delete lines with bad ID (again from page-splits)
+done
+
+# 6. Calculate stats
+awk -f consolidate_records.awk *csv > consolidated_data.csv

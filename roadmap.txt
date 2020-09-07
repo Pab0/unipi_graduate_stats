@@ -17,6 +17,7 @@
 5. Extract table to csv/similar.
 - `pdftohtml` again splits the entries into lines, but at least they're in the correct order; we can extract the information from there.
 - Too messy, especially with multi-line names. Instead: Python Camelot.
+- Not 100% perfect, butchers some names weirdly (ΑΘΑΝΑΣΟΥΛΙΑΣ), but good enough.
 
 6. Calculate stats.
 

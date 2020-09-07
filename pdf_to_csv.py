@@ -10,8 +10,6 @@ import pandas as pd
 import camelot
 import re
 
-print(sys.argv[1])
-
 if len(sys.argv)<=1 :
     sys.exit("PDF file expected as argument.")
 elif not os.path.isfile(sys.argv[1]):
