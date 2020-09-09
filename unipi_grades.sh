@@ -62,4 +62,4 @@ for csv_file in "$announcements_dir"/*.csv; do
 done
 
 # 6. Calculate stats
-awk -f consolidate_records.awk *csv > consolidated_data.csv
+awk -f consolidate_records.awk "$announcements_dir"/*.csv > consolidated_data.csv
