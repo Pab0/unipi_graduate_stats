@@ -67,5 +67,19 @@ Sure enough, this did the job. The extracted tables can easily be exported to [p
 
 For the first time, our data is stored in a code-friendly format. A note to data maintainers/publishers: Publishing the data (also) in such formats helps save a _lot_ of time to other people; with a 2-click "Export to CSV" this write-up would've just started here.
 
+#### Data cleaning
+
+(_script: [consolidate_records.awk](https://github.com/Pab0/unipi_graduate_stats/blob/master/consolidate_records.awk), [Bash script, paragraph #5.1](https://github.com/Pab0/unipi_graduate_stats/blob/master/unipi_grades.sh#L58)_)
+
+Of course, the Word template has left the table with some deficiencies, such as records split between two pages. There is no easy way to re-join the split rows correctly, so we'll have to discard them (they account for ~2% of the entries, so we can live with that). "Dirty" entries can be removed with some simple `sed` filters.
+
+We also consolidate the different .csv files into one. The graduates stay in the list until they attend the graduation and automatically carry over to the next graduation until the do so, so we have to be careful to only count their first graduation. We thus make the assumption that all students from the first graduation carried over from previous ones (since there's no way for us to check), and we then keep track of newly appearing students in the following graduations. This is a typical use-case for `awk`, and in a few lines we've achieved both tasks, as well as anonymized the data (our calculations shoulnd't care about personal information except for the year of enrollment and the time it took to complete the degree).
+
+#### Statistics
+
+(_script: [calc_stats.awk](https://github.com/Pab0/unipi_graduate_stats/blob/master/calc_stats.awk), [graph_stats.py](https://github.com/Pab0/unipi_graduate_stats/blob/master/graph_stats.py)_)
+
+Here we are at last. After all this data wrangling, the actual results became a secondary goal, and there's too many missing data and assumptions we had to make to paint a complete picture. However, we can get a rough picture. `awk` is once again used, to calculate the average time needed to graduate. And Python's `matplotlib` is a handy tool to create graphs, first a simple histogram, and then a more detailed horizontally-stacked bar chart. Sadly, it mostly shows how limited the data we have is, and how little experience I have with data visualization (there's probably many better ways to show the results). But I'm happy; the [data](https://github.com/Pab0/unipi_graduate_stats/blob/master/anonymized_data.csv) is now at there and accessible, so anyone can play around with it.
+
 
 ### Results
