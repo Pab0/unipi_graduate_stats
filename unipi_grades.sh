@@ -4,7 +4,7 @@ announcements_dir="announcements"
 mkdir -p "$announcements_dir"
 
 # 1. Download files
-# ./get_docs.py
+./get_docs.py
 
 # 2. Convert files to PDFs
 for announcement_file in $announcements_dir/*; do
