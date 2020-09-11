@@ -90,6 +90,6 @@ If you skipped the workflow above, let me reiterate that there is a _lot_ of dat
 
 With those caveats in mind, here are the results, in all their brief glory: [stats.txt](https://github.com/Pab0/unipi_graduate_stats/blob/master/stats.txt)
 
-![Histogram of years needed to graduate](https://github.com/Pab0/unipi_graduate_stats/blob/master/histogram.png)
+![Histogram of years needed to graduate](https://raw.githubusercontent.com/Pab0/unipi_graduate_stats/master/histogram.png)
 
-![Bar chart of years needed to graduate, by enrollment year](https://github.com/Pab0/unipi_graduate_stats/blob/master/students_per_year_studied.png)
+![Bar chart of years needed to graduate, by enrollment year](https://raw.githubusercontent.com/Pab0/unipi_graduate_stats/master/students_per_year_studied.png)
