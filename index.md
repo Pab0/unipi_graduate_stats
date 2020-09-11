@@ -2,7 +2,7 @@
 
 I've been wondering for some time what the average time to graduate from my Bachelor's department (University of Piraeus, Department of Informatics) is. This information isn't published anywhere; however, the department's graduation announcements contain the IDs of the graduating students. Since the ID at the department is formatted as _"Π{year of enrollment}{3-digit serial number}"_, it should be possible to extract the enrollment year of the graduating students, and thus some crude statistics about average completion time of the Bachelor's.
 
-This quickly became a big technical challenge, and the project evolved from curiosity about graduating statistics to interest in data extraction in general. Interestingly enough to warrant this write-up, at the very least. Read on, then, to share in my frustrations and triumphs, or skip to the end if you're just interested in the results.
+This quickly became a big technical challenge, and the project evolved from curiosity about graduating statistics to interest in data extraction in general. Interesting enough to warrant this write-up, at the very least. Read on, then, to share in my frustrations and triumphs, or skip to the end if you're just interested in the results.
 
 _Note: While the write-up will be in English, the data will be in Greek (before we get to strictly numerical data, that is). This shouldn't make any difference code-wise though, so you can ignore the few Greek occurences below and in the code._
 
