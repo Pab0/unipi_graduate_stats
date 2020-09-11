@@ -1,0 +1,17 @@
+Statistics for graduates from 2000 to 2015
+Average time to graduate for the cohort of 2000: 16 years.
+Average time to graduate for the cohort of 2002: 14.5 years.
+Average time to graduate for the cohort of 2003: 13 years.
+Average time to graduate for the cohort of 2004: 12.4 years.
+Average time to graduate for the cohort of 2005: 11.5 years.
+Average time to graduate for the cohort of 2006: 10.625 years.
+Average time to graduate for the cohort of 2007: 9.66667 years.
+Average time to graduate for the cohort of 2008: 8.66667 years.
+Average time to graduate for the cohort of 2009: 8.09677 years.
+Average time to graduate for the cohort of 2010: 6.8 years.
+Average time to graduate for the cohort of 2011: 6.19565 years.
+Average time to graduate for the cohort of 2012: 5.75 years.
+Average time to graduate for the cohort of 2013: 5.17241 years.
+Average time to graduate for the cohort of 2014: 4.64516 years.
+Average time to graduate for the cohort of 2015: 4 years.
+Average time to graduate for all students: 6.80844 years.
