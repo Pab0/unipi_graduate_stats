@@ -1,6 +1,7 @@
 #!/bin/bash
 
 announcements_dir="announcements"
+mkdir -p "$announcements_dir"
 
 # 1. Download files
 # ./get_docs.py
@@ -62,4 +63,12 @@ for csv_file in "$announcements_dir"/*.csv; do
 done
 
 # 6. Calculate stats
+anon_file="anonymized_data.csv"
 awk -f consolidate_records.awk "$announcements_dir"/*.csv > consolidated_data.csv
+awk -F "," 'NR==1 {print "# " $5 "," $6 "," $7 } NR>1 {print $5 "," $6 "," $7}' consolidated_data.csv | sort -rt "," > "$anon_file"
+awk -f calc_stats.awk "$anon_file" > stats.txt
+
+# 7. Graph stats
+enroll_file="enrollments_per_year.csv"
+./graph_stats.py "$anon_file" "$enroll_file"
+
