@@ -86,4 +86,10 @@ Here we are at last. After all this data wrangling, the actual results became a 
 
 ### Results
 
-If you skipped the workflow above, let me reiterate that there is a _lot_ of data missing (due to the announcements only going as far back as 2015), and we also had to make several assumptions to account for bad data (although that is a small percentage). There's also aspects we can't possibly know about, like the number of students transferring from and to the Department from other universities (for the sake of simplicity, we assume that they're about equal). With those caveats in mind, here are the results, in all their brief glory: [stats.txt](https://github.com/Pab0/unipi_graduate_stats/blob/master/stats.txt)
+If you skipped the workflow above, let me reiterate that there is a _lot_ of data missing (due to the announcements only going as far back as 2015), and we also had to make several assumptions to account for bad data (although that is a small percentage). There's also aspects we can't possibly know about, like the number of students transferring from and to the Department from other universities (for the sake of simplicity, we assume that they're about equal).
+
+With those caveats in mind, here are the results, in all their brief glory: [stats.txt](https://github.com/Pab0/unipi_graduate_stats/blob/master/stats.txt)
+
+![Histogram of years needed to graduate](https://github.com/Pab0/unipi_graduate_stats/blob/master/histogram.png)
+
+![Bar chart of years needed to graduate, by enrollment year](https://github.com/Pab0/unipi_graduate_stats/blob/master/students_per_year_studied.png)
